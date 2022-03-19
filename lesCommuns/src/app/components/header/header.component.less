@@ -1,10 +1,10 @@
 .header-bar {
-    height: 65px;
-    background-color: rgb(168, 38, 38);
+    height: 60px;
     position: fixed;
     display: flex;
     width: 100%;
     color: #fff;
+    z-index: 9;
 }
 
 .header-element {
@@ -23,13 +23,21 @@
 }
 
 .right-menu-button {
-    padding: 0.5rem;
+    padding: 0.5rem 0.75rem;
     cursor: pointer;
     border-radius: 5px;
 }
 
-.right-menu-button:hover {
+.open-button:hover {
     background-color: rgb(196, 107, 107);
+}
+
+.close-button {
+    color: rgb(192, 49, 49);
+}
+
+.close-button:hover {
+    color: rgb(196, 107, 107);
 }
 
 .title { 

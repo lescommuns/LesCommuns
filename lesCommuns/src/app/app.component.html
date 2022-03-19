@@ -1,2 +1,13 @@
 <app-header></app-header>
-<router-outlet></router-outlet>
+<app-right-menu></app-right-menu>
+<mat-sidenav-container>
+    <mat-sidenav #drawer mode="over" opened position="end" role="navigation">
+        <mat-nav-list>
+        <a mat-list-item>First Component</a>
+        <a mat-list-item>Second Component</a>
+    </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

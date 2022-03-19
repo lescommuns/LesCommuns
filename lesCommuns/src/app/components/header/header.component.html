@@ -4,8 +4,11 @@
     </div>
     <div class="header-element title"> Les Communs</div>
     <div class="right-menu-button-wrapper header-element">
-        <div class="right-menu-button">
+        <div class="right-menu-button open-button" *ngIf="!this.sidenavService.isOpened()" (click)="this.sidenavService.open()">
             <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <div class="right-menu-button close-button" *ngIf="this.sidenavService.isOpened()" (click)="this.sidenavService.close()">
+            <i class="fa fa-times" aria-hidden="true"></i>
         </div>
     </div>
 </div>
