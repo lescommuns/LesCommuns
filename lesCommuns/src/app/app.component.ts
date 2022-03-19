@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { MenuListItem } from './components/menu-list-item/menu-list-item.component';
 import { SidenavService } from './services/sidenav.service';
 
 @Component({
@@ -12,7 +13,21 @@ export class AppComponent {
 
   @ViewChild(MatSidenav, {static: false}) sidenav!: MatSidenav;
 
-  constructor(private sidenavService: SidenavService) { }
+  navItems: MenuListItem[] = [
+    {
+      route: '..',
+      name: 'Accueil, Communs!',
+      logo: 'fa fa-home'
+    },
+    {
+      route: 'cosy',
+      name: 'Le lieu, Cosy!',
+      logo: 'fa fa-map-marker'
+    }
+  ]
+  
+
+  constructor(public sidenavService: SidenavService) { }
 
   ngAfterViewInit(): void {
     this.sidenavService.setSidenav(this.sidenav);

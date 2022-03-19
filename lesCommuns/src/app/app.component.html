@@ -1,13 +1,18 @@
-<app-header></app-header>
-<app-right-menu></app-right-menu>
 <mat-sidenav-container>
-    <mat-sidenav #drawer mode="over" opened position="end" role="navigation">
+    <mat-sidenav #drawer mode="over" opened="false" position="end" role="navigation">
+        <div class="right-menu-button-wrapper">
+            <div class="right-menu-button close-button" *ngIf="this.sidenavService.isOpened()" (click)="this.sidenavService.close()">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+        </div>
         <mat-nav-list>
-        <a mat-list-item>First Component</a>
-        <a mat-list-item>Second Component</a>
-    </mat-nav-list>
+            <app-menu-list-item *ngFor="let item of this.navItems" [item]="item"></app-menu-list-item>
+        </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
-        <router-outlet></router-outlet>
+        <app-header></app-header>
+        <div class="page-content">
+            <router-outlet></router-outlet>
+        </div>
     </mat-sidenav-content>
 </mat-sidenav-container>
