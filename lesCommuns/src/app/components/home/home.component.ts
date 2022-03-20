@@ -10,10 +10,10 @@ export class HomeComponent implements OnInit {
 
   homeButtonsList: HomeButton[] = [
     {
-      label: 'Nos bureaux partagés'
+      label: 'Bureaux partagés'
     },
     {
-      label: 'Nos bureaux ouverts'
+      label: 'Bureaux ouverts'
     },
     {
       label: 'Salles de réunion'
