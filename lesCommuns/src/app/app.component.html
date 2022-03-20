@@ -1,7 +1,7 @@
 <mat-sidenav-container>
     <mat-sidenav #drawer mode="over" opened="false" position="end" role="navigation">
-        <div class="right-menu-button-wrapper">
-            <div class="right-menu-button close-button" *ngIf="this.sidenavService.isOpened()" (click)="this.sidenavService.close()">
+        <div class="close-button-wrapper">
+            <div class="close-button pointer" *ngIf="this.sidenavService.isOpened()" (click)="this.sidenavService.close()">
                 <i class="fa fa-times" aria-hidden="true"></i>
             </div>
         </div>
@@ -11,8 +11,6 @@
     </mat-sidenav>
     <mat-sidenav-content>
         <app-header></app-header>
-        <div class="page-content">
-            <router-outlet></router-outlet>
-        </div>
+        <router-outlet style="margin-top:60px"></router-outlet>
     </mat-sidenav-content>
 </mat-sidenav-container>

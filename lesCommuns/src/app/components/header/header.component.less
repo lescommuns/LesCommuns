@@ -1,6 +1,7 @@
 .header-bar {
     height: 60px;
     display: flex;
+    position: fixed;
     width: 100%;
     color: #fff;
     z-index: 3;
@@ -17,20 +18,22 @@
 }
 
 
+.title { 
+    margin-left : 0.75rem;
+    font-size: 28px;
+}
+
+.open-button-wrapper {
+    margin-right: 1rem;
+    margin-left: auto;
+}
+
+.open-button {
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+}
+
 
 .open-button:hover {
     background-color: rgb(196, 107, 107);
-}
-
-.close-button {
-    color: rgb(192, 49, 49);
-}
-
-.close-button:hover {
-    color: rgb(196, 107, 107);
-}
-
-.title { 
-    margin-left : 0.75rem;
-    font-size: 30px;
 }

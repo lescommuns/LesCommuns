@@ -10,6 +10,7 @@ import { SidenavService } from './services/sidenav.service';
 import { HomeComponent } from './components/home/home.component';
 import { CosyComponent } from './components/cosy/cosy.component';
 import { MenuListItemComponent } from './components/menu-list-item/menu-list-item.component';
+import { HomeButtonComponent } from './components/home/home-button/home-button.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MenuListItemComponent } from './components/menu-list-item/menu-list-ite
     HeaderComponent,
     HomeComponent,
     CosyComponent,
-    MenuListItemComponent
+    MenuListItemComponent,
+    HomeButtonComponent
   ],
   imports: [
     BrowserModule,

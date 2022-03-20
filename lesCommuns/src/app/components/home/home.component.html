@@ -1,81 +1,15 @@
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
+<div style="display: flex; flex-direction:column;">
 
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
+    <div style="padding: 1rem; display: flex; flex-direction: column; 
+    align-self: center; line-height: 25px; text-align: center; justify-content: center; color: white; font-size:22px">
+        <span>Regoignez-nous pour travailler </span>
+        <span> dans un espace <span><del>hors du</del></span> Communs !</span>
 
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-
+    </div>
+    
+    <div style="margin: 2rem 5rem; display: flex; justify-content: space-evenly;">
+    
+    <app-home-button *ngFor="let button of this.homeButtonsList" [button]="button"></app-home-button>
+    </div>
+    
+</div>
