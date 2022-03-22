@@ -1,12 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MenuListItem, NavigationService } from 'src/app/services/navigation.service';
 import { SidenavService } from 'src/app/services/sidenav.service';
 
-export interface MenuListItem {
-  route: string;
-  name: string;
-  logo: string;
-}
 
 @Component({
   selector: 'app-menu-list-item',
@@ -17,14 +13,9 @@ export class MenuListItemComponent implements OnInit {
 
   @Input() item!: MenuListItem;
 
-  constructor(private sidenavService: SidenavService, public router: Router) { }
+  constructor(public navigationService: NavigationService) { }
 
   ngOnInit(): void {
-  }
-
-  onItemSelected(item: MenuListItem) {
-    this.router.navigate([item.route]);
-    this.sidenavService.close();
   }
 
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { MenuListItem, NavigationService } from 'src/app/services/navigation.service';
 import { SidenavService } from '../../services/sidenav.service';
 
 @Component({
@@ -8,7 +9,9 @@ import { SidenavService } from '../../services/sidenav.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public sidenavService: SidenavService) { }
+  @Input() navItems: MenuListItem[] = [];
+
+  constructor(public sidenavService: SidenavService, public navigationService: NavigationService) { }
   
   ngOnInit(): void {
   }

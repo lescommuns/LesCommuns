@@ -10,7 +10,7 @@
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
-        <app-header></app-header>
+        <app-header [navItems]="navItems"></app-header>
         <router-outlet style="margin-top:60px"></router-outlet>
     </mat-sidenav-content>
 </mat-sidenav-container>

@@ -2,9 +2,16 @@
     <div class="header-logo header-element">
         <img height="40" width="40" src="https://st2.depositphotos.com/6377062/11132/v/950/depositphotos_111324290-stock-illustration-geometric-circle-icon-in-vector.jpg"/>
     </div>
-    <div class="header-element title"> Les Communs</div>
+    <div class="header-element title">Les Communs</div>
+    <nav class="mx-auto d-none d-md-block">
+        <ul class="h-100">
+            <li class="h-100 pointer" *ngFor="let item of this.navItems">
+                <span class="menu-header-item" (click)="this.navigationService.onItemSelected(item)">{{item.name}}</span>
+            </li>
+        </ul>
+    </nav>
     <div class="open-button-wrapper header-element">
-        <div class="open-button pointer" *ngIf="!this.sidenavService.isOpened()" (click)="this.sidenavService.open()">
+        <div class="d-md-none open-button pointer" *ngIf="!this.sidenavService.isOpened()" (click)="this.sidenavService.open()">
             <i class="fa fa-bars" aria-hidden="true"></i>
         </div>
     </div>

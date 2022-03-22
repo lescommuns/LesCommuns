@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { MenuListItem } from './components/menu-list-item/menu-list-item.component';
+import { MenuListItem } from './services/navigation.service';
 import { SidenavService } from './services/sidenav.service';
 
 @Component({
@@ -16,12 +16,27 @@ export class AppComponent {
   navItems: MenuListItem[] = [
     {
       route: '..',
-      name: 'Accueil, Communs!',
+      name: 'Accueil, Communs',
       logo: 'fa fa-home'
     },
     {
-      route: 'cosy',
-      name: 'Le lieu, Cosy!',
+      route: 'place',
+      name: 'Le lieu, Cosy',
+      logo: 'fa fa-map-marker'
+    },
+    {
+      route: 'prices',
+      name: 'Les tarifs, Combien?',
+      logo: 'fa fa-map-marker'
+    },
+    {
+      route: 'services',
+      name: 'Les services, Compris',
+      logo: 'fa fa-map-marker'
+    },
+    {
+      route: 'events',
+      name: 'Les évènements, cool!',
       logo: 'fa fa-map-marker'
     }
   ]

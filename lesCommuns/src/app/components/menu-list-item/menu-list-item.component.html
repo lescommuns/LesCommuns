@@ -1,4 +1,4 @@
-<a mat-list-item (click)="onItemSelected(item)">
+<a mat-list-item (click)="this.navigationService.onItemSelected(item)">
   {{item.name}}
 </a>
 
