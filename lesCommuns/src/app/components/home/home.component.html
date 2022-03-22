@@ -1,14 +1,9 @@
-<div style="display: flex; flex-direction:column;">
-
-    <div class="m-1 m-md-4" style="display: flex;flex-direction: column;align-self: center;line-height: 1.3rem;text-align: center;justify-content: center;color: white;font-size: 1.1rem;">
+<div class="d-flex flex-column">
+    <div class="m-1 m-md-4 home-welcome-text">
         <span>Rejoignez-nous pour travailler</span>
         <span>dans un espace <span><del>hors du</del></span> Communs !</span>
-
     </div>
-    
-    <div style="flex-wrap: wrap; margin: 2rem 5rem; display: flex; justify-content: space-evenly;">
-    
-    <app-home-button *ngFor="let button of this.homeButtonsList" [button]="button"></app-home-button>
+    <div class="mx-2 app-home-buttons-wrapper">
+        <app-home-button *ngFor="let button of this.homeButtonsList" [button]="button"></app-home-button>
     </div>
-    
 </div>
