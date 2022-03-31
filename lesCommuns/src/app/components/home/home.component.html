@@ -1,9 +1,12 @@
-<div class="d-flex flex-column">
-    <div class="m-1 m-md-4 home-welcome-text">
+<div class="home-wrapper">
+    <div class="img-wrapper">
+        <img style="min-width: 100%; min-height: 100%;" src="/assets/img/test-coworking.jpeg"/>
+    </div>
+    <div class="home-welcome-text">
         <span>Rejoignez-nous pour travailler</span>
         <span>dans un espace <span><del>hors du</del></span> Communs !</span>
     </div>
-    <div class="mx-2 app-home-buttons-wrapper">
+    <div class="mx-2 app-home-buttons-wrapper w-100">
         <app-home-button *ngFor="let button of this.homeButtonsList" [button]="button"></app-home-button>
     </div>
 </div>
