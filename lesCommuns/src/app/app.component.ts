@@ -38,8 +38,12 @@ export class AppComponent {
       route: 'events',
       name: 'Les évènements, cool!',
       logo: 'fa fa-map-marker'
-    }
-  ]
+    },
+    {
+      route: 'contact',
+      name: 'contact et Réservations',
+      logo: 'fa fa-map-marker'
+    },  ]
   
 
   constructor(public sidenavService: SidenavService) { }

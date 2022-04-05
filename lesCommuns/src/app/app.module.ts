@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +16,9 @@ import { NavigationService } from './services/navigation.service';
 import { PricesComponent } from './components/prices/prices.component';
 import { IncludedServicesComponent } from './components/included-services/included-services.component';
 import { EventsComponent } from './components/events/events.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { defineLordIconElement } from 'lord-icon-element';
+import lottie from 'lottie-web';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,7 @@ import { EventsComponent } from './components/events/events.component';
     HeaderComponent,
     HomeComponent,
     CosyComponent,
+    ContactComponent,
     MenuListItemComponent,
     HomeButtonComponent,
     PricesComponent,
@@ -38,6 +42,11 @@ import { EventsComponent } from './components/events/events.component';
     NgbModule
   ],
   providers: [SidenavService, NavigationService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor() {
+    defineLordIconElement(lottie.loadAnimation);
+  }
+}
