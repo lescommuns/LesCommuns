@@ -1,3 +1,5 @@
+@import '../styles.less';
+
 :host ::ng-deep mat-sidenav-container,
 mat-sidenav-content,
 mat-sidenav {
@@ -17,28 +19,22 @@ mat-sidenav {
     flex-direction: column;
 }
 
-:host ::ng-deep mat-nav-list {
-    z-index: 999;
-}
-
-.page-content {
-    display: flex;
-    padding: 0 1rem;
-    height: calc(100vh - 60px);
-    overflow-y: auto;
-}
-
 .close-button-wrapper {
     display: flex;
     justify-content: right;
 }
 
 .close-button:hover {
-    color: rgb(196, 107, 107);
+    color: @darkcolorhover;
 }
 
 .close-button {
     padding: 0.75rem 1rem 0 0;
-    color: rgb(192, 49, 49);
+    color: @darkcolor;
     border-radius: 5px;
+}
+
+.app-content {
+    margin-top: @headerHeight; 
+    background: linear-gradient(@darkcolor, @lightcolor);
 }

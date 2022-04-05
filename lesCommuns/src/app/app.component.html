@@ -11,6 +11,8 @@
     </mat-sidenav>
     <mat-sidenav-content>
         <app-header [navItems]="navItems"></app-header>
-        <router-outlet style="margin-top:60px"></router-outlet>
+        <div class="app-content h-100">
+            <router-outlet></router-outlet>
+        </div>
     </mat-sidenav-content>
 </mat-sidenav-container>

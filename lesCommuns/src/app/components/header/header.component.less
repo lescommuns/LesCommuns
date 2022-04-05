@@ -1,10 +1,12 @@
+@import '../../../styles.less';
+
 .header-bar {
-    height: 60px;
+    height: @headerHeight;
     display: flex;
     position: fixed;
     width: 100%;
     color: #fff;
-    z-index: 3;
+    background-color: @darkcolor;
 }
 
 .header-element {
@@ -35,7 +37,7 @@
 
 
 .open-button:hover {
-    background-color: rgb(196, 107, 107);
+    background-color: @darkcolorhover;
 }
 
 
